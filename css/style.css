@@ -1,38 +1,155 @@
-/*
-Theme Name: KenzieFlix
-Author: Kenzie Academy
-Author URI: kenzie.com.br;
-Version: 1.0
- 
---------------------------------------------
-SUGESTÃO DE ESTRUTURAÇÃO BASE 
---------------------------------------------
-**** DECLARAÇÃO DE VARIÁVEIS
-**** BODY
-**** TOPO
-**** RODAPÉ
-**** PÁGINA INICIAL
-*/
+/* RESET */
+html,body,header,section,footer,figure,figcaption,ul,li{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
 
-/* VARIÁVEIS */
+/* VARIÁVEIS-DE-CORES */
 :root{
-  
+  --bg--color: #00002E;
+  --white: #fff;
+  --button--hover: rgb(10, 12, 124);
 }
 
 /*BODY*/
 	body{
-
+		font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+		max-width: 100vw;
+		background-color: var(--bg--color);
 	}
 
 /*TOPO*/
 	header.topo{
-		
+		height: 100px;
 	}
-
-/*RODAPÉ*/
-	
+	.topo figure{
+		height: inherit;
+	}
+	.topo figure img{
+		max-width: 12rem;
+	}
+	.topo figure figcaption{
+		display: none;
+	}
 
 /*PÁGINA INICIAL*/
 	div.pg-home{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	div.pg-home section{
+		width: 100%;
+		max-width: 858px;
+	}
+	section .header--Home{
+		display: inline;
+		text-align: center;
+	}
+	section .header--Home h2{
+		color: var(--white);
+		font-size: 35px;
+	}
+
+/* LISTA DE USUÁRIOS */
+	section .lista-de-usuarios{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-items: center;
 		
+	}
+	li .usuarios--img{
+		max-width: 186px;
+		max-height: 186px;
+		overflow: hidden;
+		background-position: center;
+	}
+	li .usuarios--img.bordas{
+		border: 4px solid var(--white);
+	}
+	li .usuarios--img img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.usuarios--img figcaption{
+		display: none;
+	}
+	h3{
+		text-align: center;
+		color: var(--white);
+		font-size: 16px;
+	}
+
+/* ADICIONAR PERFIL */
+	ul .addPerfil{
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: flex-end;
+	}
+	.addPerfil .addPerfil--area{
+		width: 100%;
+		min-width: 186px;
+		min-height: 186px;
+		padding: 50px;
+	}
+	.addPerfil .addPerfil--area .addPerfil--img{
+		object-fit: cover;
+		background-position: center;
+	}
+
+/*RODAPÉ*/
+	footer{
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		align-items: center;
+		margin-top: 20px;
+	}
+	footer button{
+		padding: 15px 30px;
+		border-radius: 5px;
+		border: 2px solid var(--white);
+		background-color: var(--bg--color);
+		color: var(--white);
+	}
+	footer button.clicou{
+		background-color: rgb(10, 12, 124);
+		font-weight: 600;
+	}
+	footer button:hover{
+		background-color: rgb(10, 12, 124);
+		font-weight: 600;
+	}
+
+/* ZOOM */
+	.zoom{
+		-moz-transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+	.zoom:hover{
+		-webkit-transform: scale(1.2);
+		-moz-transform: scale(1.2);
+		-o-transform: scale(1.2);
+		-ms-transform: scale(1.2);
+		transform: scale(1.2);
+	}
+
+/* RESPONSIVIDAE */
+	@media (max-width:680px) {
+		header.topo{
+			height: 60px;
+			display: inline;
+			text-align: center;
+		}
+		section .header--Home h2{
+			font-size: 25px;
+		}
+		li .usuarios--img{
+			margin: 10px;
+		}
 	}

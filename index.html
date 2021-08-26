@@ -4,18 +4,14 @@
 	<!-- META -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<!-- TÍTULO -->
 	<title>Kenzieflix</title>
-
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/style.css" />
-
 	<!-- FAVICON -->
 	<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png" /> 
 </head>
 <body>
-	
 	<!-- CABEÇALHO -->
 	<header class="topo">
 		<figure>
@@ -23,68 +19,52 @@
 			<figcaption>Kenzieflix</figcaption>
 		</figure>
 	</header>
-
 	<!-- PÁGINA INICIAL -->
 	<div class="pg-home">
-		
 		<section>
-
-			<header>
+			<header class="header--Home">
 				<h2>Quem está assistindo?</h2>
 			</header>
-
 			<!-- LISTA DE USUÁRIOS -->
-			<ul>
-				
+			<ul class="lista-de-usuarios" >
 				<!-- USUÁRIO 1 -->
 				<li>
-					<figure>
-						<img src="img/avatar.png" alt="Gabriel">
+					<figure id="testes" class="usuarios--img" onclick="bordas()">
+						<img class="zoom" src="img/avatar.png" alt="Gabriel">
 						<figcaption>Gabriel</figcaption>
 					</figure>
-
 					<h3>Gabriel</h3>
-				</li>
-				
+				</li>	
 				<!-- USUÁRIO 2 -->
 				<li>
-					<figure>
-						<img src="img/avatar1.png" alt="Maria">
+					<figure id="testes--1" class="usuarios--img" onclick="bordas1()">
+						<img class="zoom" src="img/avatar1.png" alt="Maria">
 						<figcaption>Maria</figcaption>
 					</figure>
-
 					<h3>Maria</h3>
 				</li>
-				
 				<!-- USUÁRIO 3 -->
 				<li>
-					<figure>
-						<img src="img/avatar2.png" alt="Renato">
+					<figure id="testes--2" class="usuarios--img" onclick="bordas2()">
+						<img class="zoom" src="img/avatar2.png" alt="Renato">
 						<figcaption>Renato</figcaption>
 					</figure>
-
 					<h3>Renato</h3>
 				</li>
-
 				<!-- ADICIONAR PERFIL-->
 				<li class="addPerfil">
-					<figure>
-						<img src="img/plus-sign.png" alt="Adicionar perfil">
+					<figure class="addPerfil--area usuarios--img" onclick="bordas3()">
+						<img class="addPerfil--img zoom" src="img/plus-sign.png" alt="Adicionar perfil">
 						<figcaption>Adicionar perfil</figcaption>
 					</figure>
-
 					<h3>Adicionar perfil</h3>
 				</li>
-
 			</ul>
-
 			<footer>
-				<button>Gerenciar Perfis</button>
+				<button onclick="clicou()" id="clicou">Gerenciar Perfis</button>
 			</footer>
-
 		</section>
-
 	</div>
-
+	<script src="./js/script.js"></script>
 </body>
 </html>
